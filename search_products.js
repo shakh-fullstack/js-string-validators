@@ -1,9 +1,7 @@
 //about .includes() methods:
-
 function searchProducts(products, query) {
-  const cleanQuery = query.trim().toLowerCase();
-
-  return products.filter(product => {
+  const cleanQuery = query.toLowerCase().trim();
+  return products.filter((product) => {
     const hasInTitle = product.title.toLowerCase().includes(cleanQuery);
     const hasInCategory = product.category.toLowerCase().includes(cleanQuery);
     return hasInTitle || hasInCategory;
@@ -15,4 +13,4 @@ const items = [
   { id: 2, title: "Macbook Air M2", category: "Laptops" },
 ];
 
-console.log(searchProducts(items, "mac"));
+console.log(searchProducts(items, "LaPtOP"));
