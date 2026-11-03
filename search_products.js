@@ -1,4 +1,5 @@
-//about .includes() methods:
+//about .includes() method:
+
 function searchProducts(products, query) {
   const cleanQuery = query.toLowerCase().trim();
   return products.filter((product) => {
@@ -7,7 +8,6 @@ function searchProducts(products, query) {
     return hasInTitle || hasInCategory;
   });
 }
-
 const items = [
   { id: 1, title: "iphone 15 Pro", category: "Smartphones" },
   { id: 2, title: "Macbook Air M2", category: "Laptops" },
